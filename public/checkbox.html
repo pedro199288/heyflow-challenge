@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkbox Challenge</title>
+  </head>
+  <style>
+    #custom-checkbox {
+      display: inline-block;
+      cursor: pointer;
+      padding: 2px;
+      border-radius: 4px;
+    }
+
+    #custom-checkbox:focus-within {
+      outline: 2px solid blue;
+    }
+
+    #native-checkbox {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .checkbox-icon {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #000;
+      border-radius: 4px;
+    }
+
+    .checkbox-icon svg {
+      display: none;
+    }
+
+    input:checked + .checkbox-icon svg {
+      display: block;
+    }
+  </style>
+  <body>
+    <label id="custom-checkbox">
+      <input type="checkbox" id="native-checkbox" />
+      <div class="checkbox-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+          <rect width="256" height="256" fill="black"></rect>
+          <polyline
+            points="216 72.005 104 184 48 128.005"
+            fill="none"
+            stroke="white"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></polyline>
+        </svg>
+      </div>
+    </label>
+  </body>
+</html>
